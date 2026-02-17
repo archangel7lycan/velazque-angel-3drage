@@ -1,3 +1,185 @@
 [gd_scene format=3 uid="uid://bjgi0153qw4ei"]
 
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_m802k"]
+
 [node name="Level 01" type="Node3D" unique_id=468687440]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=389664201]
+transform = Transform3D(-0.55484426, 0.5705695, -0.6054736, 0, 0.7277727, 0.6858184, 0.83195424, 0.3805224, -0.40380052, 0, 0, 0)
+light_color = Color(0.92156863, 0.84705883, 0.6039216, 1)
+shadow_enabled = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=514260736]
+use_collision = true
+
+[node name="Floor" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1961111197]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+size = Vector3(50, 1, 50)
+
+[node name="Ceeling" type="CSGBox3D" parent="CSGCombiner3D" unique_id=797243136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.245264, 3.442346, 12.238937)
+size = Vector3(25.374512, 1, 25.552002)
+
+[node name="North Wall" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1610092897]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -22)
+size = Vector3(45, 4, 1)
+
+[node name="East Wall" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1000230481]
+transform = Transform3D(0, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, 0, 23, 1, 0)
+size = Vector3(45, 4, 1)
+
+[node name="South Wall2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=696265642]
+transform = Transform3D(-0.9999999, 0, 4.371138e-08, 0, 1, 0, -4.371138e-08, 0, -0.9999999, 0, 1, 22)
+size = Vector3(45, 4, 1)
+
+[node name="West Wall3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=114456841]
+transform = Transform3D(8.742276e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, 8.742276e-08, -23, 1, 0)
+size = Vector3(45, 4, 1)
+
+[node name="E-W Wall2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=712954349]
+transform = Transform3D(0.9999999, 0, 4.371138e-08, 0, 1, 0, -4.371138e-08, 0, 0.9999999, 0, 1, 0)
+size = Vector3(45, 4, 1)
+
+[node name="So Nor-So Cut out door bottom3" type="CSGBox3D" parent="CSGCombiner3D/E-W Wall2" unique_id=2118115602]
+transform = Transform3D(0.99999994, 2.611732e-22, -7.351372e-08, 8.4703295e-22, 1, 3.5527135e-15, 7.351372e-08, -3.5527145e-15, 0.99999994, 11.955643, -0.6227788, -0.014975266)
+operation = 2
+size = Vector3(1.5400071, 1.753479, 1.22)
+
+[node name="So Nor-So Cut out door bottom4" type="CSGBox3D" parent="CSGCombiner3D/E-W Wall2" unique_id=960780623]
+transform = Transform3D(0.99999994, 2.611732e-22, -7.351372e-08, 8.4703295e-22, 1, 3.5527135e-15, 7.351372e-08, -3.5527145e-15, 0.99999994, -11.044359, -0.6227788, -0.0149762705)
+operation = 2
+size = Vector3(1.5400071, 1.753479, 1.22)
+
+[node name="So Nor-So Cut out door top4" type="CSGCylinder3D" parent="CSGCombiner3D/E-W Wall2" unique_id=2035697304]
+transform = Transform3D(-5.194742e-15, -4.3711466e-08, -1, -1, -4.371139e-08, 7.105428e-15, -4.371139e-08, 1, -4.3711466e-08, 11.9591675, 0.121044874, 0.113717616)
+operation = 2
+radius = 0.7729492
+sides = 64
+
+[node name="So Nor-So Cut out door top9" type="CSGCylinder3D" parent="CSGCombiner3D/E-W Wall2" unique_id=632221855]
+transform = Transform3D(-5.194742e-15, -4.371147e-08, -1, -1, -4.371139e-08, 7.105428e-15, -4.371139e-08, 1, -4.371147e-08, -11.040834, 0.121044874, 0.11371661)
+operation = 2
+radius = 0.7729492
+sides = 64
+
+[node name="So Nor-So Cut out door top5" type="CSGCylinder3D" parent="CSGCombiner3D/E-W Wall2" unique_id=527756853]
+transform = Transform3D(1, 1.3113413e-07, -4.3711395e-08, 4.3711385e-08, 4.3711402e-08, 1, 1.3113414e-07, -1, 4.3711374e-08, 5.6244645, 0.33354187, 0.27787855)
+operation = 2
+radius = 0.9892578
+sides = 64
+
+[node name="So Nor-So Cut out door top7" type="CSGCylinder3D" parent="CSGCombiner3D/E-W Wall2" unique_id=853742713]
+transform = Transform3D(1, 1.3113413e-07, -4.3711395e-08, 4.3711385e-08, 4.3711402e-08, 1, 1.3113414e-07, -1, 4.3711374e-08, -17.375538, 0.33354187, 0.27787757)
+operation = 2
+radius = 0.9892578
+sides = 64
+
+[node name="So Nor-So Cut out door top8" type="CSGCylinder3D" parent="CSGCombiner3D/E-W Wall2" unique_id=1149743259]
+transform = Transform3D(1, 1.3113413e-07, -4.3711395e-08, 4.3711385e-08, 4.3711402e-08, 1, 1.3113414e-07, -1, 4.3711374e-08, -5.3755364, 0.33354187, 0.27787808)
+operation = 2
+radius = 0.9892578
+sides = 64
+
+[node name="So Nor-So Cut out door top6" type="CSGCylinder3D" parent="CSGCombiner3D/E-W Wall2" unique_id=1774353995]
+transform = Transform3D(1, 1.3113413e-07, -4.3711395e-08, 4.3711385e-08, 4.3711402e-08, 1, 1.3113414e-07, -1, 4.3711374e-08, 17.865526, 0.33354187, 0.2778791)
+operation = 2
+radius = 0.9892578
+sides = 64
+
+[node name="Nor-So Wall3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1264735101]
+transform = Transform3D(-7.1054274e-15, 0, -0.9999999, 0, 1, 0, 0.9999999, 0, -7.1054274e-15, 0, 1, 0)
+size = Vector3(45, 4, 1)
+
+[node name="So Nor-So Cut out door top" type="CSGCylinder3D" parent="CSGCombiner3D/Nor-So Wall3" unique_id=1281040911]
+transform = Transform3D(-5.1947417e-15, -4.371138e-08, -1, -1, -4.371139e-08, 7.105428e-15, -4.371139e-08, 1, -4.371138e-08, 12.113719, 0.20442867, 0.0004291535)
+operation = 2
+radius = 0.7729492
+sides = 64
+
+[node name="So Nor-So Cut out door top6" type="CSGCylinder3D" parent="CSGCombiner3D/Nor-So Wall3" unique_id=57021735]
+transform = Transform3D(-5.1947417e-15, -4.371138e-08, -1, -1, -4.371139e-08, 7.105428e-15, -4.371139e-08, 1, -4.371138e-08, -11.442976, 0.20442867, 0.0004291535)
+operation = 2
+radius = 0.7729492
+sides = 64
+
+[node name="So Nor-So Cut out door bottom" type="CSGBox3D" parent="CSGCombiner3D/Nor-So Wall3" unique_id=1645927711]
+transform = Transform3D(1, -2.5243558e-29, 3.552714e-15, 8.4703295e-22, 1, 3.5527135e-15, -3.552714e-15, -3.5527145e-15, 1, 12.116046, -0.61776805, 0.04435848)
+operation = 2
+size = Vector3(1.5400071, 1.753479, 1.22)
+
+[node name="So Nor-So Cut out door bottom2" type="CSGBox3D" parent="CSGCombiner3D/Nor-So Wall3" unique_id=73032415]
+transform = Transform3D(1, -2.5243558e-29, 3.552714e-15, 8.4703295e-22, 1, 3.5527135e-15, -3.552714e-15, -3.5527145e-15, 1, -11.444698, -0.61776805, 0.04435848)
+operation = 2
+size = Vector3(1.5400071, 1.753479, 1.22)
+
+[node name="So Nor-So Cut out door top2" type="CSGCylinder3D" parent="CSGCombiner3D/Nor-So Wall3" unique_id=1083951991]
+transform = Transform3D(-1, -4.3711335e-08, 4.3711392e-08, 4.3711385e-08, 4.3711402e-08, 1, -4.371135e-08, 1, -4.3711385e-08, 17.849894, 0.4461217, -0.019950956)
+operation = 2
+radius = 0.9892578
+sides = 64
+
+[node name="So Nor-So Cut out door top3" type="CSGCylinder3D" parent="CSGCombiner3D/Nor-So Wall3" unique_id=446158751]
+transform = Transform3D(-1, -4.371133e-08, 4.3711392e-08, 4.3711385e-08, 4.3711402e-08, 1, -4.3711346e-08, 1, -4.3711385e-08, 6.277879, 0.4669118, 0.16439821)
+operation = 2
+radius = 0.9892578
+sides = 64
+
+[node name="So Nor-So Cut out door top4" type="CSGCylinder3D" parent="CSGCombiner3D/Nor-So Wall3" unique_id=1156330732]
+transform = Transform3D(-1, -4.371133e-08, 4.3711392e-08, 4.3711385e-08, 4.3711402e-08, 1, -4.3711346e-08, 1, -4.3711385e-08, -17.153961, 0.4669118, 0.16439821)
+operation = 2
+radius = 0.9892578
+sides = 64
+
+[node name="So Nor-So Cut out door top5" type="CSGCylinder3D" parent="CSGCombiner3D/Nor-So Wall3" unique_id=744350348]
+transform = Transform3D(-1, -4.371133e-08, 4.3711392e-08, 4.3711385e-08, 4.3711402e-08, 1, -4.3711346e-08, 1, -4.3711385e-08, -5.237617, 0.4669118, 0.16439821)
+operation = 2
+radius = 0.9892578
+sides = 64
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="CSGCombiner3D" unique_id=1996922015]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -19.122139, 4.447066, -1.5623968)
+polygon = PackedVector2Array(-1, -5, -1.0184891, -0.45987368, 10.970402, -4.9464555)
+depth = 3.32
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="CSGCombiner3D" unique_id=1009280671]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4630358, 4.447066, 21.437603)
+polygon = PackedVector2Array(-1, -5, -1.0184891, -0.45987368, 10.970402, -4.9464555)
+depth = 3.32
+
+[node name="ProtoController" parent="." unique_id=1987815239 instance=ExtResource("1_m802k")]
+transform = Transform3D(0.015096524, 0, -0.99988604, 0, 1, 0, 0.99988604, 0, 0.015096524, -19.710617, 0, 12.4041)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=408778936]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -12.816574, 2.4145472, 12.727279)
+light_color = Color(1, 1, 0.37254903, 1)
+light_energy = 9.105
+spot_range = 10.0
+spot_angle = 73.125
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=650599361]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -2.816574, 2.8249588, 20.986286)
+light_color = Color(1, 1, 0.37254903, 1)
+light_energy = 9.105
+spot_range = 10.0
+spot_angle = 73.125
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=1614542641]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -2.816574, 2.7556224, 2.7272797)
+light_color = Color(1, 1, 0.37254903, 1)
+light_energy = 9.105
+spot_range = 10.0
+spot_angle = 73.125
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="." unique_id=1878439591]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20.816574, 2.7697606, 2.7272797)
+light_color = Color(1, 1, 0.37254903, 1)
+light_energy = 9.105
+spot_range = 10.0
+spot_angle = 73.125
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=31501416]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20.816574, 2.8107293, 20.72728)
+light_color = Color(1, 1, 0.37254903, 1)
+light_energy = 9.105
+spot_range = 10.0
+spot_angle = 73.125
